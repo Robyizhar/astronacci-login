@@ -15,14 +15,24 @@ use App\Http\Controllers\Auth\SocialiteController;
 |
 */
 /* Google Login */
-Route::get('auth/google/redirect', [SocialiteController::class, 'redirect'])
+Route::get('auth/google/redirect', [SocialiteController::class, 'googleRedirect'])
     ->middleware(['guest'])
-    ->name('redirect');
+    ->name('google-redirect');
 
-Route::get('auth/google/callback', [SocialiteController::class, 'callback'])
+Route::get('auth/google/callback', [SocialiteController::class, 'googleCallback'])
     ->middleware(['guest'])
-    ->name('callback');
+    ->name('google-callback');
 /* Google Login */
+
+/* Facebook Login */
+Route::get('auth/facebook/redirect', [SocialiteController::class, 'facebookRedirect'])
+    ->middleware(['guest'])
+    ->name('facebook-redirect');
+
+Route::get('auth/facebook/callback', [SocialiteController::class, 'facebookCallback'])
+    ->middleware(['guest'])
+    ->name('facebook-callback');
+/* Facebook Login */
 
 Route::get('/', function () { return redirect('dashboard'); });
 

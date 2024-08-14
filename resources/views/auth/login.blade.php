@@ -13,11 +13,11 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="grid grid-cols-2 gap-4 mb-5 mt-2">
-            <a href="https://instagram.com" class="px-4 py-2 font-semibold text-sm bg-blue-900 hover:bg-blue-800 text-white rounded-md shadow-sm flex">
+            <a href="{{ route('facebook-redirect') }}" class="px-4 py-2 font-semibold text-sm bg-blue-900 hover:bg-blue-800 text-white rounded-md shadow-sm flex">
                 <i data-feather="facebook" class="icon ml-9 h-4 font-bold"></i>
                 Facebook
             </a>
-            <a href="{{ route('redirect') }}" class="px-4 py-2 font-semibold text-sm bg-white text-black border rounded-md hover:bg-gray-100 shadow-md flex">
+            <a href="{{ route('google-redirect') }}" class="px-4 py-2 font-semibold text-sm bg-white text-black border rounded-md hover:bg-gray-100 shadow-md flex">
                 <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-google icon ml-9 h-4" width="24" height="24" viewBox="0 0 326667 333333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
                     <path d="M326667 170370c0-13704-1112-23704-3518-34074H166667v61851h91851c-1851 15371-11851 38519-34074 54074l-311 2071 49476 38329 3428 342c31481-29074 49630-71852 49630-122593m0 0z" fill="#4285f4"/>
                     <path d="M166667 333333c44999 0 82776-14815 110370-40370l-52593-40742c-14074 9815-32963 16667-57777 16667-44074 0-81481-29073-94816-69258l-1954 166-51447 39815-673 1870c27407 54444 83704 91852 148890 91852z" fill="#34a853"/>
@@ -66,9 +66,12 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="ml-3 mr-3">
                     {{ __('Log in') }}
                 </x-button>
+                <a href="{{ route('register') }}" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                    Register
+                </a>
             </div>
         </form>
     </x-auth-card>
