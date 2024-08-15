@@ -8,10 +8,10 @@ Project Setup in Loclhost:
 - run `composer install`
 - copy .env.example to .env
 - setup database according in your local setting
-- run `php artisan migrate
-- run `php artisan db:seed
-- run npm install
-- run npm run dev
+- run `php artisan migrate`
+- run `php artisan db:seed`
+- run `npm install`
+- run `npm run dev`
 - Put 10 dummy videos into the storage/app/public/video folder and name them 1 to 10 in mp4 format.(optional)
 
 Project Demo 
