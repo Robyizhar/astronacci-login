@@ -18,10 +18,12 @@
                                     <p class="text-gray-700">
                                         {!! nl2br($article->text) !!}
                                     </p>
-                                    <video controls style="height: 500ox; width: auto;">
-                                        <source src="{{ asset($article->video->title) }}" type="video/mp4">
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    @isset($article->video)
+                                        <video controls style="height: 500ox; width: auto;">
+                                            <source src="{{ asset($article->video->title) }}" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    @endisset
                                 </div>
                                 <a href="#" onclick="toggleContent(event, '{{ $article->id }}')" class="text-blue-500 hover:underline mt-2 block">
                                     <span id="toggle-text-{{ $article->id }}">Baca Selengkapnya</span>
