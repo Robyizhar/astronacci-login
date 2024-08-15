@@ -10,10 +10,10 @@ class ArticleFactory extends Factory
     protected $model = Article::class;
     public function definition()
     {
-        $fakerID = \Faker\Factory::create('id_ID');
+        $faker = \Faker\Factory::create('id_ID');
         return [
-            'title' => $fakerID->unique()->sentence(),
-            'text' => implode("\n\n", $fakerID->paragraphs(15))
+            'title' => $faker->unique()->sentence(),
+            'text' => implode("\n\n", $faker->paragraphs(15))
         ];
     }
 }

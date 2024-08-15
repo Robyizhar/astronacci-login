@@ -13,4 +13,8 @@ class Article extends Model
         'title',
         'text'
     ];
+
+    public function video() {
+        return $this->hasOne(Video::class);
+    }
 }
