@@ -13,3 +13,6 @@ Project Setup in Loclhost:
 - run npm install
 - run npm run dev
 - Put 10 dummy videos into the storage/app/public/video folder and name them 1 to 10 in mp4 format.(optional)
+
+Project Demo 
+- link : https://astronacci-login-test.robbyizhar.com (email:admin@gmail.com password:admin)
